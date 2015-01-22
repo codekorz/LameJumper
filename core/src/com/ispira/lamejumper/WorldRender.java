@@ -43,13 +43,13 @@ public class WorldRender {
 		renderBirds();
 		renderCoins();
 		batch.end();
-		/*sr.begin(ShapeType.Line);
+		sr.begin(ShapeType.Line);
 		sr.setColor(Color.RED);
-		/*for(Bird b : world.birds){
-			sr.rect(world.lame.position.x, world.lame.position.y, world.lame.bounds.width*30, world.lame.bounds.height*30);
-			//sr.rect(b.bounds.x*30, b.bounds.y*30, b.bounds.width*30, b.bounds.height*30);	
-		sr.rect(world.lame.position.x, world.lame.position.y, world.lame.bounds.width*30, world.lame.bounds.height*30);
-		sr.end();*/
+		for(Bird b : world.birds){
+			sr.rect(world.lame.position.x, world.lame.position.y, world.lame.bounds.width, world.lame.bounds.height);
+			sr.rect(b.bounds.x, b.bounds.y, b.bounds.width, b.bounds.height);	
+		sr.rect(world.lame.position.x, world.lame.position.y, world.lame.bounds.width, world.lame.bounds.height);
+		sr.end();
 	}
 	private void renderCoins(){
 		TextureRegion coinFrame;

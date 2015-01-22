@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
-import com.badlogic.gdx.physics.box2d.World; 
 
 public class WorldUtil {
 	public static final Vector2 gravity = new Vector2(0, -9.8f);
@@ -23,9 +21,6 @@ public class WorldUtil {
 	public int score = 0;
 	public float heightCam;
 	
-	public static World createWorld(){
-		return new World(gravity, true);
-	}
 	
 	public WorldUtil(){
 		rand = new Random();
