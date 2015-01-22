@@ -2,8 +2,6 @@ package com.ispira.lamejumper;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public class Lame extends DynamicGameObject {
 	public static final int STATE_INGROUND = 0;
@@ -17,16 +15,11 @@ public class Lame extends DynamicGameObject {
 	public int state;
 	float stateTime = 0;
 	
-	protected Body body;
-	
 	public Lame(float x, float y){
 		super(x,y,WIDTH,HEIGHT);
 		state = STATE_INGROUND;
 		stateTime = 0;
 	}
-	/*public Lame(Body b){
-		this.body = b;
-	}*/
 	public void update(float delta){
 		velocity.add(WorldUtil.gravity.x * delta, WorldUtil.gravity.y * delta);
 		position.add(velocity.x * delta, velocity.y * delta);
