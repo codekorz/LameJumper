@@ -48,8 +48,10 @@ public class WorldRender {
 		for(Bird b : world.birds){
 			sr.rect(world.lame.position.x, world.lame.position.y, world.lame.bounds.width, world.lame.bounds.height);
 			sr.rect(b.bounds.x, b.bounds.y, b.bounds.width, b.bounds.height);	
+		}
 		sr.rect(world.lame.position.x, world.lame.position.y, world.lame.bounds.width, world.lame.bounds.height);
 		sr.end();
+		
 	}
 	private void renderCoins(){
 		TextureRegion coinFrame;
